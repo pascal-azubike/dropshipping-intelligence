@@ -17,9 +17,13 @@ export const TopNavbar = () => {
 
   return (
     <header className="fixed top-0 left-0 right-0 h-12 border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 z-50">
+      {/* Mobile Sidebar Toggle at extreme left */}
+      <div className="md:hidden">
+        <SidebarTrigger className="h-7 w-7 absolute left-2 top-1.5 z-50" />
+      </div>
       <div className="flex h-full items-center px-4">
+        {/* Logo */}
         <div className="flex items-center gap-3">
-          <SidebarTrigger className="h-7 w-7 md:hidden" />
           <div className="hidden md:block">
             <Logo size="sm" />
           </div>

@@ -14,12 +14,12 @@ export const AppLayout: React.FC<{ children: React.ReactNode }> = ({ children })
 
   return (
     <SidebarProvider defaultOpen={true}>
-      <div className="min-h-screen bg-background">
+      <div className="min-h-screen bg-background w-screen">
         <TopNavbar />
-        <div className="flex h-[calc(100vh-var(--navbar-height))] pt-[var(--navbar-height)] ">
+        <div className="flex h-[calc(100vh-var(--navbar-height))] pt-[var(--navbar-height)]">
           <AppSidebar />
-          <main className="flex-1 overflow-y-auto">
-            <div className="container mx-auto px-4 py-6 mt-12">
+          <main className="flex-1 overflow-y-auto w-full">
+            <div className="container mx-auto px-4 py-24 ">
               {children}
             </div>
           </main>
